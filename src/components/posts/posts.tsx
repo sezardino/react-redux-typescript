@@ -1,5 +1,14 @@
-const Alert = () => {
-  return <div>Alert</div>;
+import React from 'react';
+import {IPost} from '../../interfaces';
+import Post from '../post';
+
+type PostsProps = {
+  posts: Array<IPost>;
 };
 
-export default Alert;
+const Posts = () => {
+  return <p>posts</p>;
+  // return posts.map((post) => <Post post={post} key={post.id} />);
+};
+
+export default Posts;
