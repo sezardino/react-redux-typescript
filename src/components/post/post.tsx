@@ -5,11 +5,16 @@ type PostProps = {
   post: IPost;
 };
 
-const Post: React.FC<PostProps> = ({post}) => {
+const Post: React.FC<PostProps> = (props) => {
+  const {
+    post: {title},
+    children,
+  } = props;
   return (
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title">{post.title}</h5>
+        <h5 className="card-title">{title}</h5>
+        {children && children}
       </div>
     </div>
   );
